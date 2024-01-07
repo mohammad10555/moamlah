@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>متجر إلكتروني</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #9ACD32;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #9ACD32;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #7CFC00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>متجر إلكتروني</h1>
+    </header>
+
+    <div class="container">
+        <h2>نموذج الشراء</h2>
+        <form action="process.php" method="post">
+            <label for="category">القسم:</label>
+            <select name="category" id="category" required>
+                <option value="">اختر القسم</option>
+                <option value="هواتف">هواتف</option>
+                <option value="اكسسوارات">اكسسوارات</option>
+                <option value="لابتوبات واكسسوارتها">لابتوبات واكسسوارتها</option>
+                <option value="البسة">البسة</option>
+            </select>
+
+            <label for="subcategory">الفئة:</label>
+            <select name="subcategory" id="subcategory">
+                <option value="">اختر الفئة</option>
+            </select>
+
+            <label for="fullname">الاسم الكامل:</label>
+            <input type="text" name="fullname" id="fullname" required>
+
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" name="phone" id="phone" required>
+
+            <label for="city">المدينة:</label>
+            <input type="text" name="city" id="city" required>
+
+            <label for="address">العنوان:</label>
+            <input type="text" name="address" id="address" required>
+
+            <label for="payment">طريقة الدفع:</label>
+            <select name="payment" id="payment" required>
+                <option value="فيزا">فيزا</option>
+                <option value="ماستر كارد">ماستر كارد</option>
+                <option value="مدى">مدى</option>
+            </select>
+
+            <input type="submit" value="شراء">
+        </form>
+    </div>
+</body>
+</html>
